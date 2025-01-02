@@ -1,0 +1,1272 @@
+
+
+/* fonts start  ...................... */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+
+/* .....................fonts end ............... */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+  background-color: #F6F8FB;
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+  .title {
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+    color: whitesmoke;
+  }
+  .hero-title {
+    font-size: 2rem;
+    color: whitesmoke;
+    font-weight: 600;
+  }
+  .divider {
+    margin: 6% 0 2.5% 0;
+    
+  }
+  .subscription-title{
+    text-align: center;
+  width: 100%;
+  }
+  .subscription-content{
+    padding-left: 4%;
+    width: 80%;
+  }
+span {
+  color: whitesmoke;;
+  padding: 6px;
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.sub-title{
+  font-size: 1.2rem;
+  color: #131312;
+  font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1rem;
+    padding-top: 5%;
+
+}
+.description-1 {
+  font-size: 1.1rem;
+  color: #131312;
+  font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.description-card {
+  background-color: #F6F8FB;
+  border-radius: 20px;
+  padding: 20px 30px 20px 30px;
+
+}
+.holder {
+  width: 100%;
+  text-align: center;
+}
+.icon {
+  width: 3rem;
+}
+
+/* Navbar  start  ...................... */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: #060605; 
+    color: #ffffff;
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+
+
+  .logo img {
+    width: 150px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .menu-toggle div {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-links {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links li {
+    position: relative;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #007BFF;
+  }
+
+  /* Pseudo-element for hover effect */
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #007BFF;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  /* Dropdown */
+  .language-dropdown {
+    position: relative;
+    font-size: 1rem;
+    padding: 0.5% 1% 0.5% 1%;
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .language-dropdown button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .language-dropdown button:hover {
+    color: #007BFF;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: black;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    list-style: none;
+    padding: 10px;
+    z-index: 100;
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .dropdown-menu li {
+    margin: 5px 0;
+  }
+
+  .dropdown-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px;
+    display: block;
+  }
+
+  .dropdown-menu a:hover {
+    color: #007BFF;
+  }
+
+  .language-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+/* Navbar  end   ...................... */
+
+
+/* hero section styling  start  */
+
+.hero-section{
+  background-image: url(../img/banner.png);
+  position: relative;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* for making hero content center  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Adjust text color */
+  text-align: center;
+  padding: 0 20px;    
+  border-end-start-radius: 80px;        
+}
+
+   /* Overlay */
+   .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: overlay;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+     z-index: auto; 
+ } 
+
+/* right content  */
+
+ .vertical-line {
+  width: 2px;
+  height: 300px;
+  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0)); /* Fading effect */
+  position: relative;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #007BFF;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: glow 1.5s infinite alternate;
+}
+
+.dot:nth-child(1) {
+  top: 10%;
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  top: 50%;
+  animation-delay: 0.5s;
+}
+
+.dot:nth-child(3) {
+  top: 90%;
+  animation-delay: 1s;
+}
+
+.dot-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(30px);
+  white-space: nowrap;
+  font-size: 1rem;
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  animation: fadeIn 1.5s infinite alternate;
+}
+
+.dot:nth-child(1) + .dot-title {
+  top: 10%;
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) + .dot-title {
+  top: 50%;
+  animation-delay: 0.5s;
+}
+
+.dot:nth-child(3) + .dot-title {
+  top: 90%;
+  animation-delay: 1s;
+}
+
+
+/* type writing effect  */
+
+.typewriter-container {
+  position: relative;
+  font-size: 2rem;
+  color: #007BFF;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #333;
+  width: 20ch; /* Matches the longest text */
+  animation: typing 5s steps(20, end) infinite, blink 0.5s step-end infinite;
+}
+
+
+/* hero   sections  ends   ...................... */
+
+/* about section style starts here  */
+.about {
+  background-color: #fff; 
+  border-radius: 20px; 
+}
+
+
+    /* Employee Card */
+    .employee-card {
+      position: relative;
+      /* width: 40vw; */
+      padding: 20px;
+      border-radius: 10px;
+    background-color: #F6F8FB;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    /* Skeleton Effect */
+    .skeleton {
+      background: linear-gradient(-90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+      background-size: 200% 100%;
+      animation: skeleton-loading 1.5s infinite;
+    }
+
+
+    /* Profile Picture */
+    .profile-picture {
+      width: 80px;
+      height: 80px;
+      background-image: url(../img/blog1.jpg);
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      border: 3px solid #ddd;
+    }
+
+    /* Employee Info */
+    .employee-info {
+      margin-left: 120px;
+      margin-top: 10px;
+    }
+
+    .employee-info h2,
+    .employee-info p {
+      margin-bottom: 10px;
+      height: 20px;
+      border-radius: 5px;
+    }
+
+    .employee-info h2 {
+      width: 70%;
+    }
+
+    .employee-info .designation {
+      width: 50%;
+    }
+
+    .employee-info .description {
+      width: 100%;
+      height: 15px;
+    }
+
+    /* Stars Section */
+    .stars {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .stars span {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: #f5f5f5;
+      border-radius: 50%;
+    }
+
+/* about section style ends  here  */
+
+/* Services section styles starts here  */
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  /* width: 400px;
+  height: 300px; */
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+  /* Color should remain the same during drag */
+  transition: background-color 0.2s ease, transform 0.2s ease-in-out;
+}
+
+/* Shivering effect */
+.shivering {
+  animation: shake 0.5s infinite;
+}
+
+
+/* No color change when dragging */
+.dragging {
+  opacity: 1;
+  cursor: grabbing;
+  /* Disable color change effect */
+  background-color: whitesmoke !important;
+}
+
+/* Card Header */
+.card-header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title and Description */
+.card-title {
+  margin-top: 25%;
+  font-size: 1.2rem;
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+}
+
+/* Services section styles ends here  */
+
+/* partner Section starts here  */
+.partner {
+  height: 60vh;
+  border-bottom-left-radius:40px ;
+}
+
+.carousel-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Ensures continuous flow */
+}
+
+.carousel img {
+  width: 150px;
+  margin: 0 15px;
+}
+
+/* Animation for the top carousel (move left to right) */
+.carousel-top {
+  animation: moveLeftToRight 10s linear infinite;
+}
+
+/* Animation for the bottom carousel (move right to left) */
+.carousel-bottom {
+  animation: moveRightToLeft 10s linear infinite;
+}
+
+
+/* Pause animations on hover */
+.carousel-section:hover .carousel {
+  animation-play-state: paused;
+}
+
+/* partner Section ends here  */
+
+/* contact us section starts here  */
+
+
+.subscription-form {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 70%;
+}
+
+.subscription-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.forms input[type="email"]{
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #007BFF;
+  font-size: 16px;
+}
+
+
+.subscription-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid #007BFF;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.subscription-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.subscription-form button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  margin-top: 20px;
+  text-align: center;
+  color: green;
+}
+.input-design {
+  border-radius: 10px;
+}
+/* contact us section ends here  */
+
+
+/* about page style starts here  */
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax h1, .parallax h2 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: whitesmoke;
+  background-color: rgba(41, 37, 37, 0.4); /* White with 50% opacity */
+
+ 
+}
+
+.content {
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.section {
+  text-align: center;
+}
+
+.cta a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.cta a:hover {
+  background-color: #0056b3;
+}
+
+/* Background images for parallax sections */
+.parallax1 {
+  background-image: url('../img/blog2.jpg');
+}
+
+.parallax2 {
+  background-image: url('../img/blog1.jpg');
+}
+
+.parallax3 {
+  background-image: url('../img/blog3.jpg');
+}
+
+.parallax4 {
+  background-image: url('../img/blog2.jpg');
+}
+
+.parallax5 {
+  background-image: url('../img/blog3.jpg');
+}
+
+
+/* about page style ends here  */
+
+/* blog page starts here  */
+
+.blog-card {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: popup 0.5s forwards;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+} 
+
+.blog-card-body {
+  padding: 15px;
+}
+
+.blog-card h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.blog-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.blog-card a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.category-filter {
+  margin-bottom: 20px;
+}
+
+
+#searchInput {
+  width: 70%;
+  border: none;
+  padding: 2%;
+  border-bottom: 1px solid #007BFF;
+}
+/* blog page ends here  */
+/* service page starts here  */
+.services-container {
+  text-align: center;
+
+border-top-left-radius: 10px;
+}
+
+.services-title {
+color: #fff;
+font-size: 2rem;
+font-weight: 600;
+}
+
+.book-card {
+position: relative;
+width: 350px;
+height: 250px;
+perspective: 1500px;
+margin: 0 auto 20px;
+}
+
+.card-inner {
+position: absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transform: rotateY(0deg);
+transition: transform 1s ease-in-out;
+border-radius: 10px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-inner.flip {
+transform: rotateY(180deg);
+}
+
+.card-face {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+padding: 20px;
+transition: all 0.5s ease;
+}
+
+.card-front {
+background: linear-gradient(145deg, #007BFF, #0056b3);
+color: white;
+}
+
+.card-back {
+background: #fff;
+color: #333;
+transform: rotateY(180deg);
+border: 1px solid #ddd;
+}
+
+.card-title {
+font-size: 1.4rem;
+margin-bottom: 10px;
+}
+
+.card-description {
+font-size: 1rem;
+text-align: justify;
+}
+
+.services-buttons {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+margin-bottom: 5%;
+}
+
+
+
+.services-buttons button:hover {
+transform: scale(1.1);
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+background: linear-gradient(145deg, #a7aeb4, #141414);
+}
+
+
+
+/* service page ends here  */
+/* contact page design  */
+
+.contact-left{
+  width: 30%;
+}
+.contact-right{
+  width: 70%;
+}
+.holding-info {
+  padding-bottom: 3.5%;
+}
+.hero-section-contact {
+  position: relative;
+  height: 400px;
+}
+.hero-section-contact iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Contact Info Section */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.contact-info div {
+  width: 30%;
+}
+
+.contact-info h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-info p {
+  color: #555;
+}
+
+/* Contact Form Styling */
+/* Contact Form Styling */
+.contact-form {
+margin-top: 30px;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border: none; /* Remove all borders */
+border-bottom: 2px solid #ccc; /* Only bottom border */
+border-radius: 10px;
+outline: none;
+transition: border-color 0.3s ease; /* Smooth transition for the border color */
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+border-bottom-color: #007bff; /* Glowing effect on focus */
+}
+
+/* Submit Button */
+.contact-form button {
+padding: 10px 20px;
+border: none;
+background-color: #007bff;
+color: white;
+font-size: 16px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.contact-form button:hover {
+background-color: #0056b3;
+}
+
+
+/* Submit Button */
+.contact-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Confirmation Popup */
+.confirmation-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+.confirmation-popup .popup-content {
+  background-color: #007bff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.confirmation-popup .popup-content p {
+  margin: 10px 0;
+}
+
+.confirmation-popup .popup-content button {
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+
+/* 
+contact page desgin end  */
+
+.footer {
+  height: 15vh;
+   color: whitesmoke; 
+  background: #000000; 
+}
+/* components button  start  ...................... */
+
+.water-button {
+  position: relative;
+  padding: 10px 20px;
+  border: 2px solid #007bff;
+  background-color: transparent;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+#subscribe-btn{
+  text-align: center; 
+  border: none; background:transparent; 
+  font-family: 'Oswald', 'serif'; 
+  color: black;
+}
+
+/* Change the text and border color on hover */
+.water-button:hover {
+  color: white;
+  border-color: #0056b3;
+  background-color: rgba(0, 86, 179, 0.2);  /* Light background color on hover */
+}
+
+/* Creating the water flow effect */
+.water-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scaleX(0);
+  pointer-events: none;
+  transition: none;
+}
+
+/* Animation for the water flowing effect when hovered */
+.water-button:hover::before {
+  animation: wave-flow 1.5s ease-out forwards;
+}
+
+
+/* component  ends  ...................... */
+
+/*animation sections starts here */
+
+/* hero serction line dotted glow animation  */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #007BFF;
+  }
+  to {
+    box-shadow: 0 0 20px #007BFF;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* type writer effect animation  */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 20ch;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* blinking dot animation  */
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* skeleeton effect animaiton  */
+
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+
+
+/* Animation for the water flowing effect */
+@keyframes wave-flow {
+  0% {
+      left: -100%;
+      transform: scaleX(0);
+      opacity: 0;
+  }
+  50% {
+      left: 0;
+      transform: scaleX(1);
+      opacity: 0.6;
+  }
+  100% {
+      left: 100%;
+      transform: scaleX(0);
+      opacity: 0;
+  }
+}
+
+
+/* service card shivering animation */
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(5px); }
+}
+
+
+/* Keyframes for top carousel moving from left to right  logo aniamtion */
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%); /* Start off-screen to the left */
+  }
+  100% {
+    transform: translateX(100%); /* End off-screen to the right */
+  }
+}
+
+/* Keyframes for bottom carousel moving from right to left */
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End off-screen to the left */
+  }
+}
+
+/* popup notification animation  */
+@keyframes popup {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+  /* Mobile Styles */
+  
+/* Navbar responsive code  */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+      z-index: 10;
+    }
+    .hero-title{
+      font-size: 1.1rem;
+    } 
+     .title {
+      font-size: 1.36rem;
+     } 
+  /* #subscribe-btn{
+    font-size: 0.9rem;
+    border:0.5px solid gray;
+  } */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: black;
+      position: absolute;
+      top: 18px;
+      left: 0;
+      padding: 10px 0;
+    }
+
+    .nav-links.active {
+      display: flex;
+      z-index: 4;
+      padding-bottom: 20%;
+    }
+
+    .nav-links li {
+      text-align: center;
+      margin: 5px 0;
+    }
+
+    .menu-toggle.active .line1 {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active .line2 {
+      opacity: 0;
+    }
+
+    .menu-toggle.active .line3 {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+    .water-button {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    margin-top: 5%;
+    
+    }
+    .subscription-title{
+      width: 100%;
+      }
+      .subscription-content{
+        width: 100%;
+      }
+      .custom-class{
+  flex-direction: column;
+  text-align: center;
+      }
+    .language-dropdown {
+      margin-top: 3.5%;
+    }
+
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .content-left {
+      max-width: 100%;
+    }
+  
+    .content-right {
+      margin-top: 20px;
+    }
+  
+    .dot-title {
+      transform: translateX(-53%) translateY(25%);
+      text-align: center;
+      font-weight: 400;
+      font-size: 0.9rem;
+  }
+  .hero-sub {
+    font-size: 0.9rem;
+    
+  }
+  /* .holder {
+    margin-top: 5%;
+  } */
+  .about {
+    flex-direction: column !important;
+  }
+
+  .about {
+    padding:0;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .parallax h1, .parallax h2 {
+  font-size: 1.8rem;
+
+  }
+
+  .contact-left{
+    width: 100%;
+  }
+  .contact-right{
+    width: 100%;
+  }
+
+  }

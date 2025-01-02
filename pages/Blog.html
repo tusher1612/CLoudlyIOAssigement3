@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJv6tM8v01g9g5XqShcLoUuwzC2d8cOa8bvcVzZ2E/5B7U6g5w3NEv4a+hF0" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/style.css">
+  <style>
+  
+   
+
+  </style>
+</head>
+<body>
+  <nav class="navbar z-index-4">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="../img/logo.png" alt="Logo">
+    </div>
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <!-- Nav Links -->
+    <ul class="nav-links">
+      <li><a href="Home.html" data-key="home">Home</a></li>
+      <li><a href="About.html" data-key="about">About Us</a></li>
+      <li><a href="Services.html"data-key="services">Services</a></li>
+      <li><a href="Blog.html" data-key="blogs">Blogs</a></li>
+      <li><a href="Contact.html" data-key="contact">Contact Us</a></li>
+     
+      <select id="language-dropdown" class="language-dropdown" class="form-select language-selector">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+      </select>
+      </ul>
+  </nav>
+
+
+
+  <div class="container" style="padding: 5%; margin-top: 30px;">
+    <!-- Search Field and Category Filter -->
+    <div class="row">
+      <div class="col-md-6 search-container">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search Your Blog Here" data-key="searchInput" onkeyup="filterBlogs()">
+      </div>
+      <div class="col-md-6 category-filter">
+        <select class="water-button" id="categorySelect" class="form-select" style="border: none; color: black;"  onchange="filterBlogs()">
+          <option value="" data-key="all-category">All Categories</option>
+          <option value="technology" data-key="technology"> Technology</option>
+          <option value="business" data-key="business">Business</option>
+          <option value="lifestyle" data-key="lifestyle">Lifestyle</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Blog Cards Section -->
+    <div class="row" id="blogCards">
+      <div class="col-md-4">
+        <div class="blog-card" data-category="technology">
+          <img src="../img/blog1.jpg" alt="Blog Image">
+          <div class="blog-card-body">
+            <h5 class="title" style="color: black;" data-key="blog-page-title1">Technology Blog 1</h5>
+            <p class="card-text" data-key="blog-page-description1">A brief description of a technology blog post.</p>
+            <a href="#" data-key="blog-page-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card" data-category="business">
+          <img src="../img/blog2.jpg" alt="Blog Image">
+          <div class="blog-card-body">
+            <h5 class="title" style="color: black;" data-key="blog-page-title2">Business Blog 1</h5>
+            <p class="card-text" data-key="blog-page-description2">A brief description of a business blog post.</p>
+            <a href="#" data-key="blog-page-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card" data-category="lifestyle">
+          <img src="../img/blog3.jpg" alt="Blog Image">
+          <div class="blog-card-body">
+            <h5 class="title" style="color: black;" data-key="blog-page-title3">Lifestyle Blog </h5>
+            <p class="card-text" data-key="blog-page-description3">A brief description of a lifestyle blog post.</p>
+            <a href="#" data-key="blog-page-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+  
+    </div>
+  </div>
+
+  <footer class="d-flex justify-content-center align-items-center footer" style="text-align: center;" >
+     
+   <p style="margin-top:25px; position: absolute; text-align: center; width: 100%;">&copy Mordern Digital | 2024 | Tech Solution |  </p> 
+    
+    </footer>
+ 
+
+ 
+    
+    
+   
+
+  <script>
+    // Function to filter blogs by search term and category
+    function filterBlogs() {
+      let searchTerm = document.getElementById('searchInput').value.toLowerCase();
+      let category = document.getElementById('categorySelect').value;
+      let blogCards = document.querySelectorAll('.blog-card');
+
+      blogCards.forEach(card => {
+        let title = card.querySelector('h5').textContent.toLowerCase();
+        let description = card.querySelector('p').textContent.toLowerCase();
+        let cardCategory = card.getAttribute('data-category');
+
+        if (
+          (title.includes(searchTerm) || description.includes(searchTerm)) &&
+          (category === "" || cardCategory === category)
+        ) {
+          card.style.display = 'block'; // Show matching card
+        } else {
+          card.style.display = 'none'; // Hide non-matching card
+        }
+      });
+    }
+  </script>
+  <script src="../scripts/data.js"></script>
+ <script src="../scripts/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
